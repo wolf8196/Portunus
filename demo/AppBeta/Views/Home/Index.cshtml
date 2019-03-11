@@ -1,0 +1,32 @@
+﻿@model System.Collections.Generic.List<(string dispName, string appName)>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="offset-2 col-8">
+        <h2 class="text-center">Welcome to App Beta</h2>
+        <br />
+        @{
+            if (User.Identity.IsAuthenticated)
+            {
+                <h2 class="text-center">Thank you for logging in.</h2>
+                <h2 class="text-center">You can now SSO to another app</h2>
+
+                <h3>You can SSO to:</h3>
+                <ul class="list-group">
+                    @foreach (var item in Model)
+                    {
+                        <li class="list-group-item">
+                            @Html.ActionLink(item.dispName, "To", "SSO", new { id = item.appName }, new { target = "_blank" })
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <h2 class="text-center">Please log in</h2>
+            }
+        }
+    </div>
+</div>

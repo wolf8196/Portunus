@@ -1,0 +1,30 @@
+﻿@model DemoApps.Shared.Models.LoginViewModel;
+
+@{
+    ViewBag.Title = "Log In";
+}
+
+<div class="row">
+    <div class="offset-2 col-8">
+        <h2 class="text-center">Log In</h2>
+        <hr />
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "form-group" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(x => x.Login, "Login")
+                @Html.TextBoxFor(x => x.Login, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Login, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Password, "Password")
+                @Html.PasswordFor(x => x.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Password, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-default btn-success" value="Log In" />
+            </div>
+        }
+    </div>
+</div>

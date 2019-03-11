@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portunus.Crypto", "Portunus.Crypto\Portunus.Crypto.csproj", "{39AA9F3C-7BDD-4E6E-B809-7CEF1073DE1C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portunus.Utils", "Portunus.Utils\Portunus.Utils.csproj", "{2131C8B0-0F5D-4A2F-B9AE-16B503DB99FC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portunus.Crypto.Tests", "Portunus.Crypto.Tests\Portunus.Crypto.Tests.csproj", "{59CA7B06-1CC1-44A2-BC4F-2474279C87B8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portunus.Tests.Utils", "Portunus.Tests.Utils\Portunus.Tests.Utils.csproj", "{ED51D0A6-0D23-4E36-B009-951AA67B00D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portunus.Tests", "Portunus.Tests", "{48DE016F-1C8A-4901-AA1D-39043655D280}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portunus.SSO", "Portunus.SSO\Portunus.SSO.csproj", "{E079BF09-BC08-4E65-9429-99459E8AD4F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portunus.SSO.Tests", "Portunus.SSO.Tests\Portunus.SSO.Tests.csproj", "{79CA25AF-3445-41DF-95AA-F74E046C9E33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portunus.Web", "Portunus.Web\Portunus.Web.csproj", "{92831135-1815-42F5-A810-353590D0B9C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39AA9F3C-7BDD-4E6E-B809-7CEF1073DE1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39AA9F3C-7BDD-4E6E-B809-7CEF1073DE1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39AA9F3C-7BDD-4E6E-B809-7CEF1073DE1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39AA9F3C-7BDD-4E6E-B809-7CEF1073DE1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2131C8B0-0F5D-4A2F-B9AE-16B503DB99FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2131C8B0-0F5D-4A2F-B9AE-16B503DB99FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2131C8B0-0F5D-4A2F-B9AE-16B503DB99FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2131C8B0-0F5D-4A2F-B9AE-16B503DB99FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59CA7B06-1CC1-44A2-BC4F-2474279C87B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59CA7B06-1CC1-44A2-BC4F-2474279C87B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59CA7B06-1CC1-44A2-BC4F-2474279C87B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59CA7B06-1CC1-44A2-BC4F-2474279C87B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED51D0A6-0D23-4E36-B009-951AA67B00D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED51D0A6-0D23-4E36-B009-951AA67B00D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED51D0A6-0D23-4E36-B009-951AA67B00D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED51D0A6-0D23-4E36-B009-951AA67B00D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E079BF09-BC08-4E65-9429-99459E8AD4F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E079BF09-BC08-4E65-9429-99459E8AD4F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E079BF09-BC08-4E65-9429-99459E8AD4F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E079BF09-BC08-4E65-9429-99459E8AD4F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79CA25AF-3445-41DF-95AA-F74E046C9E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79CA25AF-3445-41DF-95AA-F74E046C9E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79CA25AF-3445-41DF-95AA-F74E046C9E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79CA25AF-3445-41DF-95AA-F74E046C9E33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92831135-1815-42F5-A810-353590D0B9C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92831135-1815-42F5-A810-353590D0B9C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92831135-1815-42F5-A810-353590D0B9C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92831135-1815-42F5-A810-353590D0B9C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{59CA7B06-1CC1-44A2-BC4F-2474279C87B8} = {48DE016F-1C8A-4901-AA1D-39043655D280}
+		{ED51D0A6-0D23-4E36-B009-951AA67B00D9} = {48DE016F-1C8A-4901-AA1D-39043655D280}
+		{79CA25AF-3445-41DF-95AA-F74E046C9E33} = {48DE016F-1C8A-4901-AA1D-39043655D280}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43F4E9E7-E9DB-44ED-BC13-79A201629A7D}
+	EndGlobalSection
+EndGlobal
