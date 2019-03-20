@@ -6,15 +6,12 @@ namespace Portunus.Crypto.AesEncryption
 {
     internal class AesEncryptor
     {
-        private const int IVSize = 16;
+        public const int BlockSize = 16;
 
         public byte[] Encrypt(byte[] plainText, byte[] key)
         {
-            using (var aesAlg = Aes.Create())
+            using (var aesAlg = Create())
             {
-                aesAlg.Padding = PaddingMode.PKCS7;
-                aesAlg.Mode = CipherMode.CBC;
-
                 using (var encryptor = aesAlg.CreateEncryptor(key, aesAlg.IV))
                 using (var resultStream = new MemoryStream())
                 {
@@ -33,13 +30,10 @@ namespace Portunus.Crypto.AesEncryption
 
         public byte[] Decrypt(byte[] cipherText, byte[] key)
         {
-            using (var aesAlg = Aes.Create())
+            using (var aesAlg = Create())
             {
-                aesAlg.Padding = PaddingMode.PKCS7;
-                aesAlg.Mode = CipherMode.CBC;
-
-                var iv = cipherText.AsSpan(0, IVSize);
-                var realCipherText = cipherText.AsSpan(IVSize, cipherText.Length - IVSize);
+                var iv = cipherText.AsSpan(0, BlockSize);
+                var realCipherText = cipherText.AsSpan(BlockSize, cipherText.Length - BlockSize);
 
                 using (var decryptor = aesAlg.CreateDecryptor(key, iv.ToArray()))
                 using (var resultStream = new MemoryStream())
@@ -50,6 +44,14 @@ namespace Portunus.Crypto.AesEncryption
                     return resultStream.ToArray();
                 }
             }
+        }
+
+        private Aes Create()
+        {
+            var aesAlg = Aes.Create();
+            aesAlg.Padding = PaddingMode.PKCS7;
+            aesAlg.Mode = CipherMode.CBC;
+            return aesAlg;
         }
     }
 }

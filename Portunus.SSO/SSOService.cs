@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Dynamic;
-using Portunus.Crypto.Interfaces;
-using Portunus.Crypto.Models;
 using Portunus.SSO.Settings;
+using Portunus.TokenProvider.Interfaces;
+using Portunus.TokenProvider.Models;
 using Portunus.Utils;
 
 namespace Portunus.SSO
@@ -14,7 +14,6 @@ namespace Portunus.SSO
 
         internal SSOService(ITokenProviderFactory factory, SSOTargetSettings targetSettings)
         {
-            factory.ThrowIfNull(nameof(factory));
             settings = targetSettings.ThrowIfNull(nameof(settings));
 
             settings.AppName.ThrowIfNullOrEmpty(nameof(settings.AppName));

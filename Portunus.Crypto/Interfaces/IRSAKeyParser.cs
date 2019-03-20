@@ -2,7 +2,7 @@
 
 namespace Portunus.Crypto.Interfaces
 {
-    internal interface IRSAKeyParser
+    public interface IRSAKeyParser
     {
         bool TryParsePrivate(string s, out RSAParameters key);
 

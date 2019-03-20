@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Dynamic;
 using Microsoft.Extensions.Options;
-using Portunus.Crypto.Interfaces;
 using Portunus.SSO.Exceptions;
 using Portunus.SSO.Interfaces;
 using Portunus.SSO.Settings;
+using Portunus.TokenProvider.Interfaces;
 using Portunus.Utils;
 
 namespace Portunus.SSO

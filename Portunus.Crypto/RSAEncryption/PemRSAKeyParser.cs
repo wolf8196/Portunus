@@ -7,7 +7,7 @@ using Portunus.Crypto.Interfaces;
 
 namespace Portunus.Crypto.RSAEncryption
 {
-    internal class PemRSAKeyParser : IRSAKeyParser
+    public class PemRSAKeyParser : IRSAKeyParser
     {
         public bool TryParsePrivate(string s, out RSAParameters key)
         {
