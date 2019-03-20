@@ -1,8 +1,9 @@
 ﻿using System.Security.Cryptography;
+using Portunus.Crypto.Interfaces;
 
 namespace Portunus.Crypto.RSAEncryption
 {
-    internal class RSAEncryptor
+    public class RSAEncryptor : IRSAEncryptor
     {
         public byte[] Encrypt(byte[] plainText, RSAParameters publicKey)
         {

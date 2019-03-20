@@ -1,4 +1,4 @@
-﻿using Portunus.Crypto.Settings;
+﻿using Portunus.TokenProvider.Settings;
 
 namespace Portunus.SSO.Settings
 {
