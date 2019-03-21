@@ -45,7 +45,7 @@ namespace Portunus.Crypto.Tests
             var key = new byte[Target.KeySize];
             RandomNumberGenerator.Create().GetBytes(key);
 
-            var ecrypted = Target.Encrypt(message, key);
+            var ecrypted = Target.Encrypt(message, key, associatedData);
             var associatedDataLength = associatedData?.Length ?? 0;
 
             var toTest = new byte[associatedDataLength + ecrypted.Length];
