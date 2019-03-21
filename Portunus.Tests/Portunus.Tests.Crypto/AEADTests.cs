@@ -45,7 +45,7 @@ namespace Portunus.Crypto.Tests
             var key = new byte[Target.KeySize];
             RandomNumberGenerator.Create().GetBytes(key);
 
-            var ecrypted = Target.Encrypt(message, key);
+            var ecrypted = Target.Encrypt(message, key, associatedData);
             var associatedDataLength = associatedData?.Length ?? 0;
 
             var toTest = new byte[associatedDataLength + ecrypted.Length];
@@ -118,6 +118,38 @@ namespace Portunus.Crypto.Tests
 
             // Assert
             Assert.Null(actual);
+        }
+
+        [Theory]
+        [InlineData(0)]
+        [InlineData(10)]
+        [InlineData(15)]
+        [InlineData(31)]
+        [InlineData(63)]
+        [InlineData(127)]
+        public void ThrowsOnEncryptIfKeySizeIsInvalid(int length)
+        {
+            // Arrange
+            var key = new byte[length];
+
+            // Act/Assert
+            var ex = Assert.Throws<ArgumentException>("key", () => Target.Encrypt(new byte[0], key));
+        }
+
+        [Theory]
+        [InlineData(0)]
+        [InlineData(10)]
+        [InlineData(15)]
+        [InlineData(31)]
+        [InlineData(63)]
+        [InlineData(127)]
+        public void ThrowsOnDecryptIfKeySizeIsInvalid(int length)
+        {
+            // Arrange
+            var key = new byte[length];
+
+            // Act/Assert
+            var ex = Assert.Throws<ArgumentException>("key", () => Target.Decrypt(new byte[0], key));
         }
     }
 }
